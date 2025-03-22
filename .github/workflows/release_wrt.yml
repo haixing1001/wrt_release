@@ -110,8 +110,9 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}    
 
       - name: Build Firmware2
-        run: ./build2.sh ${{ inputs.model }}
-
+        run: |
+          chomd +x ./build2.sh
+          ./build2.sh ${{ inputs.model }}
       - name: Get Kernel Verion
         run: |
           # 获取内核版本
