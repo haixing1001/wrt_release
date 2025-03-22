@@ -111,7 +111,7 @@ jobs:
 
       - name: Build Firmware2
         run: |
-          chomd +x ./build2.sh
+          chmod +x ./build2.sh
           ./build2.sh ${{ inputs.model }}
       - name: Get Kernel Verion
         run: |
